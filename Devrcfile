@@ -1,0 +1,7 @@
+
+variables:
+  BIN_NAME: "devrc-plugin-system-shell"
+
+include:
+  - url: https://raw.githubusercontent.com/devrc-hub/recipes/master/rust-project.yml
+    checksum: "9a3f447a8160fc22ea8889c81e7f80845166772e909db10b98d442a11fe7c4ed"

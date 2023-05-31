@@ -1,0 +1,45 @@
+[package]
+name = "devrc-plugin-system-shell"
+version = "0.1.0"
+edition = "2018"
+
+resolver="2"
+
+[lib]
+name = "devrc_plugin_system_shell"
+path = "src/lib.rs"
+doc = false
+
+crate-type = ["cdylib"]
+
+
+[dependencies]
+env_logger = "0.9.0"
+log = "0.4.17"
+libloading = "0.8.0"
+anyhow = "1.0.62"
+indexmap = "1.9.1"
+
+devrc-plugins = "0.5.2"
+devrc-core = "0.5.2"
+
+[build-dependencies]
+datetime = { version = "0.5.2", default_features = false }
+
+
+[badges]
+maintenance = { status = "actively-developed" }
+
+
+[profile.dev]
+opt-level = 0
+debug = 2
+lto = false
+
+[profile.test]
+opt-level = 0
+debug = 2
+lto = false
+
+[profile.release]
+opt-level = 3
